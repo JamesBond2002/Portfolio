@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 html {
@@ -23,14 +23,15 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 90%;
+  width: 95%;
   margin: auto;
+  position: fixed;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 .hamburger {
@@ -41,7 +42,7 @@ nav {
   background: white;
   border-radius: 100%;
   -webkit-box-shadow: 0 0 0.5rem rgba(84, 134, 156, 0.8);
-          box-shadow: 0 0 0.5rem rgba(84, 134, 156, 0.8);
+  box-shadow: 0 0 0.5rem rgba(84, 134, 156, 0.8);
   position: relative;
 }
 
@@ -89,7 +90,7 @@ nav {
   z-index: 1;
   /* height: 20vh; */
   transform: translateY(2rem);
-  transition: all .8s ease-out;
+  transition: all 0.8s ease-out;
 }
 
 .intro-img {
@@ -100,6 +101,53 @@ nav {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   /* background-color: lightslategrey; */
+}
+
+.about-me-text {
+  position: absolute;
+  top: 100vh;
+  width: 50%;
+  height: 100vh;
+  background-color: lightcoral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.about-me-main {
+  position: absolute;
+  top: 100vh;
+  left: 50%;
+  width: 50%;
+  height: 100vh;
+  background-color: lightslategray;
+}
+
+.projects div {
+  position: absolute;
+  top: 100vh;
+  width: 50%;
+}
+
+.projects-text {
+  height: 100vh;
+  background-color: lightcoral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 !important;
+}
+
+.projects-main {
+  height: 300vh;
+  left: 50%;
+  background-color: lightslategray;
+}
+
+.designer {
+  text-align: center;
 }
