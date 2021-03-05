@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.main-head {
+  background: transparent;
+}
+
+nav {
+  min-height: 12vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.hamburger {
+  z-index: 1;
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+  background: white;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 0 0.5rem rgba(84, 134, 156, 0.8);
+          box-shadow: 0 0 0.5rem rgba(84, 134, 156, 0.8);
+  position: relative;
+}
+
+.hamburger div {
+  position: absolute;
+  opacity: 1;
+  height: 0.4rem;
+  background: black;
+  border-radius: 2rem;
+  left: 0.8rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.hamburger #first {
+  width: 3.4rem;
+  top: 1.5rem;
+}
+
+.hamburger #second {
+  width: 2.6rem;
+  top: 2.3rem;
+}
+
+.hamburger #third {
+  width: 3.4rem;
+  top: 3.1rem;
+}
+
+.intro-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: lightcoral; */
+}
+
+.intro-text h1:nth-child(1) {
+  opacity: 0;
+  z-index: 1;
+  /* height: 20vh; */
+  transform: translateY(2rem);
+  transition: all .8s ease-out;
+}
+
+.intro-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: lightslategrey; */
+}
