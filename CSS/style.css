@@ -18,7 +18,13 @@ h1 {
   background: transparent;
 }
 
+body {
+  min-height: 200vh;
+  perspective: 100rem;
+}
+
 nav {
+  z-index: 100;
   min-height: 12vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -35,7 +41,6 @@ nav {
 }
 
 .hamburger {
-  z-index: 1;
   width: 5rem;
   height: 5rem;
   cursor: pointer;
@@ -78,6 +83,7 @@ nav {
   left: 0;
   width: 50%;
   height: 100vh;
+  /* background: transparent; */
   text-align: center;
   display: flex;
   justify-content: center;
@@ -105,49 +111,78 @@ nav {
   /* background-color: lightslategrey; */
 }
 
-.about-me-text {
-  position: absolute;
-  top: 100vh;
-  width: 50%;
-  height: 100vh;
-  background-color: lightcoral;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.about-me-main {
-  position: absolute;
-  top: 100vh;
-  left: 50%;
-  width: 50%;
-  height: 100vh;
-  background-color: lightslategray;
-}
-
-.projects div {
-  position: absolute;
-  top: 100vh;
-  width: 50%;
-}
-
-.projects-text {
-  height: 100vh;
-  background-color: lightcoral;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0 !important;
-}
-
-.projects-main {
-  height: 300vh;
-  left: 50%;
-  background-color: lightslategray;
-}
-
 .designer {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
   text-align: center;
+}
+
+.designer svg {
+  width: 100%;
+}
+
+#left-side {
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+}
+
+#right-side {
+  clip-path: polygon(100% 0, 50% 0, 50% 100%, 100% 100%);
+}
+
+.intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+}
+
+.projects {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  top: 100vh;
+  background: lightslategray;
+}
+
+.container {
+  width: 33%;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  background: lightblue;
+}
+
+.box {
+  margin: auto;
+  width: 85%;
+  min-height: 70vh;
+  transform-style: preserve-3d;
+  border-radius: 3rem;
+  padding: 0rem 3rem;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+  background: lightcoral;
+}
+
+.view {
+  margin-top: 5rem;
+}
+
+.view button {
+  width: 100%;
+  padding: 1rem 0rem;
+  background: black;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 3rem;
+  font-weight: bolder;
 }
