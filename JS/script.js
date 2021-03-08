@@ -8,8 +8,21 @@ let fadeOut = (to, setText) => {
   }, 500);
 };
 
+let scrollApear = (t) => {
+  let element = document.querySelector(t);
+  console.log(element);
+  if(element.getBoundingClientRect().top 
+    < window.innerHeight/1.5)
+    element.classList.add('appear-horizontal');
+};
+
 
 let introText = document.querySelector('.intro-text').children[0];
+
+let hb = document.querySelector('.hamburger'); 
+let navLinks = document.querySelector('.nav-links');
+
+console.log(navLinks)
 
 introText.style.opacity = 1;
 introText.style.transform = 'translateY(0)';
@@ -46,7 +59,6 @@ setTimeout(() => {
   }, 500);
 }, 1500);
 
-
 let leftSide = [
   document.querySelector('#left-side'),
   document.querySelector('.intro-text')
@@ -56,14 +68,13 @@ let rightSide = [
   document.querySelector('.intro-img')
 ];
 window.addEventListener('scroll', () => {
+  let amount = window.pageYOffset / window.innerHeight;
+  amount *= window.innerWidth;
   leftSide.forEach(x => {
-    x.style.left = -window.pageYOffset + 'px';
+    x.style.left = -amount + 'px';
   });
-  rightSide.forEach(x => {
-    x.style.right = -window.pageYOffset + 'px';
-  });
-  rightSide[0].style.left = window.pageYOffset + 'px';
-  rightSide[1].style.left = (window.innerWidth/2 + window.pageYOffset) + 'px';
+  rightSide[0].style.left = amount + 'px';
+  rightSide[1].style.left = (window.innerWidth/2 + amount) + 'px';
 });
 
 let container = document.querySelectorAll('.container'), 
@@ -86,4 +97,18 @@ for(let i = 0; i<3; i++) {
     box[i].style.transition = 'all .5s ease';
     box[i].style.transform = `rotateX(0deg) rotateY(0deg)`;
   });
-}
+};
+
+hb.addEventListener('click', () => {
+  console.log('hogya');
+  navLinks.classList.toggle('open');
+});
+
+window.addEventListener('scroll', () => {
+  scrollApear('.project1 .box');
+  scrollApear('.project2 .box');
+  scrollApear('.project3 .box');
+  scrollApear('#about-project1');
+  scrollApear('#about-project2');
+  scrollApear('#about-project3');
+});
