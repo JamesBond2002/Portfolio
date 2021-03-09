@@ -139,14 +139,24 @@ nav {
   /* background: transparent; */
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   /* background-color: lightcoral; */
+  h3 {
+    margin-top: 6vh;
+    margin-left: 1rem;
+    font-weight: 400;
+    font-size: 3vh;
+  }
 }
 
 .intro-text h1:nth-child(1) {
+  padding-left: 1rem;
+  font-size: 5vh;
   opacity: 0;
   z-index: 1;
+  margin-top: 25vh;
   /* height: 20vh; */
   transform: translateY(2rem);
   transition: all 0.8s ease-out;

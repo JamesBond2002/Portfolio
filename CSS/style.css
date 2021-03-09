@@ -153,6 +153,10 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -162,9 +166,19 @@ nav {
   /* background-color: lightcoral; */
 }
 
+.intro-text h3 {
+  margin-top: 6vh;
+  margin-left: 1rem;
+  font-weight: 400;
+  font-size: 3vh;
+}
+
 .intro-text h1:nth-child(1) {
+  padding-left: 1rem;
+  font-size: 5vh;
   opacity: 0;
   z-index: 1;
+  margin-top: 25vh;
   /* height: 20vh; */
   -webkit-transform: translateY(2rem);
           transform: translateY(2rem);
