@@ -147,8 +147,9 @@ window.addEventListener('scroll', () => {
 
 let videos = document.querySelectorAll('video');
 // let entered = [false, false, false]
+console.log(videos);
 
-for(let i = 0; i<2; i++)
+for(let i = 0; i<3; i++)
 {
   videos[i].addEventListener('mouseenter', () => {
     videos[i].play();
