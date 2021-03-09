@@ -11,7 +11,7 @@ html {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 4vh;
   font-weight: 500;
 }
 
@@ -64,7 +64,7 @@ h1 {
   color: lightslategray;
   font-weight: 1000;
   text-decoration: none;
-  font-size: 8rem;
+  font-size: 8vh;
 }
 
 .navs::before {
@@ -259,7 +259,7 @@ nav {
 
 .box {
   margin: auto;
-  width: 50%;
+  width: 70%;
   min-height: 85vh;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
@@ -331,14 +331,14 @@ nav {
 #about-project2 h2,
 #about-project3 h2 {
   font-family: "Bad Script", cursive;
-  font-size: 8rem;
+  font-size: 8vh;
 }
 
 #about-project1 p,
 #about-project2 p,
 #about-project3 p {
   margin: 0 10rem;
-  font-size: 2.5rem;
+  font-size: 2.5vh;
 }
 
 .skills {
@@ -361,7 +361,7 @@ nav {
 }
 
 .skills-title h1 {
-  font-size: 10rem;
+  font-size: 10vh;
   margin-bottom: 0rem;
   font-family: "Bad Script", cursive;
 }
@@ -388,7 +388,7 @@ footer {
 
 footer h3 {
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 2vh;
 }
 
 .contact-info {
@@ -407,19 +407,133 @@ footer h3 {
 
 footer > h3 {
   margin-right: 30rem;
-  font-size: 4rem;
+  font-size: 4vh;
   font-family: "Bad Script", cursive;
-}
-
-.appear-horizontal {
-  opacity: 1 !important;
-  -webkit-transform: translateX(0) !important;
-          transform: translateX(0) !important;
 }
 
 .appear-vertical {
   opacity: 1 !important;
   -webkit-transform: translateY(0) !important;
           transform: translateY(0) !important;
+}
+
+.preloader {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #121212;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+.face {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 20rem;
+  height: 20rem;
+  border: 2px solid #121212;
+}
+
+.face.face1 {
+  -webkit-box-shadow: 0 0 1rem black;
+          box-shadow: 0 0 1rem black;
+  border-radius: 50%;
+  background: #090909;
+  border-left: 2px solid #ffff00;
+  border-top: 2px solid #ffff00;
+  -webkit-animation: animate 3s linear infinite;
+          animation: animate 3s linear infinite;
+}
+
+.face.face2 {
+  width: 15rem;
+  height: 15rem;
+  -webkit-box-shadow: 0 0 1rem black;
+          box-shadow: 0 0 1rem black;
+  border-radius: 50%;
+  background: #090909;
+  border-right: 2px solid #03a9f4;
+  border-bottom: 2px solid #03a9f4;
+  animation: animate 3s linear infinite reverse;
+}
+
+.face .circle {
+  position: absolute;
+  top: calc(50% - .1rem);
+  left: 50%;
+  width: 50%;
+  height: 0.2rem;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.face.face1 .circle {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.face.face2 .circle {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.face .circle::before {
+  content: '';
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: #fff;
+  top: -.4rem;
+  right: -.6rem;
+}
+
+.face.face1 .circle::before {
+  background: #ffff00;
+  -webkit-box-shadow: 0 0 2rem #ffff00, 0 0 4rem #ffff00, 0 0 6rem #ffff00, 0 0 8rem #ffff00, 0 0 10rem #ffff00, 0 0 0 0.5rem rgba(255, 255, 0, 0.1);
+          box-shadow: 0 0 2rem #ffff00, 0 0 4rem #ffff00, 0 0 6rem #ffff00, 0 0 8rem #ffff00, 0 0 10rem #ffff00, 0 0 0 0.5rem rgba(255, 255, 0, 0.1);
+}
+
+.face.face2 .circle::before {
+  background: #03a9f4;
+  -webkit-box-shadow: 0 0 2rem #03a9f4, 0 0 4rem #03a9f4, 0 0 6rem #03a9f4, 0 0 8rem #03a9f4, 0 0 10rem #03a9f4, 0 0 0 0.5rem rgba(3, 169, 244, 0.1);
+          box-shadow: 0 0 2rem #03a9f4, 0 0 4rem #03a9f4, 0 0 6rem #03a9f4, 0 0 8rem #03a9f4, 0 0 10rem #03a9f4, 0 0 0 0.5rem rgba(3, 169, 244, 0.1);
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.preload-finish {
+  opacity: 0;
+  pointer-events: none;
+}
+
+img {
+  height: 80vh;
 }
 /*# sourceMappingURL=style.css.map */

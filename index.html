@@ -13,6 +13,14 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="preloader">
+      <div class="face face1">
+        <div class="circle"></div>
+      </div>
+      <div class="face face2">
+        <div class="circle"></div>
+      </div>
+    </div>
     <header class="main-head">
       <nav>
         <div class="hamburger">
@@ -21,14 +29,14 @@
           <div id="third"></div>
         </div>
         <ul class="nav-links">
-          <li><a href="#" class="navs" data-text="Home">Home</a></li>
-          <li><a href="#" class="navs" data-text="Projects">Projects</a></li>
-          <li><a href="#" class="navs" data-text="Skills">Skills</a></li>
-          <li><a href="#" class="navs" data-text="Contact">Contact</a></li>
+          <li><a href="#home" class="navs" data-text="Home">Home</a></li>
+          <li><a href="#projects" class="navs" data-text="Projects">Projects</a></li>
+          <li><a href="#skills" class="navs" data-text="Skills">Skills</a></li>
+          <li><a href="#contact" class="navs" data-text="Contact">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <section class="intro">
+    <section class="intro" id="home">
       <div class="designer" id="left-side">
         <svg
           width="1808"
@@ -271,10 +279,10 @@
         <h1>Hey Folks</h1>
       </div>
       <div class="intro-img">
-        <img src="/img/me.png" height="800vh" alt="" />
+        <img src="/img/me2.png" alt="" />
       </div>
     </section>
-    <section class="projects">
+    <section class="projects" id="projects">
       <div class="project1">
         <div class="container">
           <div class="box">
@@ -284,37 +292,18 @@
           </div>
         </div>
         <div id="about-project1">
-          <h2>Color Switch</h2>
+          <h2>Color Switch 2.0</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id officia
-            commodi assumenda. Sit placeat distinctio ab quis vitae doloribus ea
-            sint molestias facere? Odit deleniti minima, aliquam asperiores
-            minus est corporis aspernatur ducimus, totam quos necessitatibus
-            repellat ut eum saepe dolor ullam quo perferendis ipsum, dolore
-            soluta suscipit nostrum quae a. Error commodi quis nobis, optio quos
-            totam possimus neque animi dolores pariatur molestiae accusamus esse
-            in eligendi tenetur illum explicabo natus? Eum unde tempore
-            consectetur quidem fugiat consequuntur temporibus illo eveniet nemo!
-            Quasi sit, temporibus voluptatem consequuntur sunt ipsa dolores ad
-            itaque quis hic! Voluptates nemo pariatur facilis deleniti!
+            Made the replica of the famous game Color Switch. The Technologies used were JavaFx and CSS. The objective of the game is to collect as many stars as possible by manoeuvring the obstacles. If you hit any obstacle, you can continue
+            with your earned stars or the game ends if you have none and then you have to start from the beginning. This game is endless like the classic mode of original game.
           </p>
         </div>
       </div>
       <div class="project2">
         <div id="about-project2">
-          <h2>Mobile Controlled Car</h2>
+          <h2>Who will park the Car?</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id officia
-            commodi assumenda. Sit placeat distinctio ab quis vitae doloribus ea
-            sint molestias facere? Odit deleniti minima, aliquam asperiores
-            minus est corporis aspernatur ducimus, totam quos necessitatibus
-            repellat ut eum saepe dolor ullam quo perferendis ipsum, dolore
-            soluta suscipit nostrum quae a. Error commodi quis nobis, optio quos
-            totam possimus neque animi dolores pariatur molestiae accusamus esse
-            in eligendi tenetur illum explicabo natus? Eum unde tempore
-            consectetur quidem fugiat consequuntur temporibus illo eveniet nemo!
-            Quasi sit, temporibus voluptatem consequuntur sunt ipsa dolores ad
-            itaque quis hic! Voluptates nemo pariatur facilis deleniti!
+            Made a multiplayer game using Arduino and MIT app inventor. The game consists of 2 mobile controlled car which will be controlled by 2 different mobile phones using bluetooth. The objective of the game is to park the car at a given position the one who parks the car first wins the game. I also used Ultrasonic sensor to prevent the car from accident.
           </p>
         </div>
         <div class="container" id="container2">
@@ -336,22 +325,12 @@
         <div id="about-project3">
           <h2>Data Visualization</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id officia
-            commodi assumenda. Sit placeat distinctio ab quis vitae doloribus ea
-            sint molestias facere? Odit deleniti minima, aliquam asperiores
-            minus est corporis aspernatur ducimus, totam quos necessitatibus
-            repellat ut eum saepe dolor ullam quo perferendis ipsum, dolore
-            soluta suscipit nostrum quae a. Error commodi quis nobis, optio quos
-            totam possimus neque animi dolores pariatur molestiae accusamus esse
-            in eligendi tenetur illum explicabo natus? Eum unde tempore
-            consectetur quidem fugiat consequuntur temporibus illo eveniet nemo!
-            Quasi sit, temporibus voluptatem consequuntur sunt ipsa dolores ad
-            itaque quis hic! Voluptates nemo pariatur facilis deleniti!
+            A website made to visualize the data of Cricket matches won by a respective country in a specific type of match (Test, ODI, T20) and the total matches played by the country in that type of match. Technologies used were Javascript (Chart.js), HTML, CSS. Used hovering interactions which helps in getting a better clearity of the data presented.
           </p>
         </div>
       </div>
     </section>
-    <section class="skills">
+    <section class="skills" id="skills">
       <div class="skills-title">
         <h1>Skills</h1>
       </div>
@@ -891,7 +870,7 @@
         </svg>
       </div>
     </section>
-    <footer>
+    <footer id="contact">
       <h3>Let's Connect</h3>
       <div class="contact-info">
         <h3>Email: nishkarsharora2002@gmail.com</h3>
