@@ -144,3 +144,16 @@ window.addEventListener('scroll', () => {
   scrollApear('#about-project2');
   scrollApear('#about-project3');
 });
+
+let videos = document.querySelectorAll('video');
+// let entered = [false, false, false]
+
+for(let i = 0; i<2; i++)
+{
+  videos[i].addEventListener('mouseenter', () => {
+    videos[i].play();
+  });
+  videos[i].addEventListener('mouseleave', () => {
+    videos[i].pause();
+  });
+}

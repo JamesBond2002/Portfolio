@@ -201,7 +201,7 @@ nav {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  background: rebeccapurple;
+  // background: rebeccapurple;
 }
 
 .projects > div {
@@ -221,15 +221,21 @@ nav {
 
 .box {
   margin: auto;
-  width: 70%;
-  min-height: 85vh;
+  width: 50%;
   transform-style: preserve-3d;
   border-radius: 3rem;
   padding: 0rem 3rem;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
-  background: lightcoral;
+  // background: lightcoral;
   opacity: 0;
   transition: all 0.5s ease-in-out;
+  text-align: center;
+
+  h3 {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+  }
 }
 
 .project1 .box,
@@ -242,6 +248,31 @@ nav {
 #about-project1,
 #about-project3 {
   transform: translateX(10rem);
+}
+
+.project1 .box {
+  height: 85vh;
+}
+
+.project2 .box {
+  width: 80%;
+  height: 57vh;
+}
+.project3 .box {
+  width: 80%;
+  height: 45vh;
+  // img {
+  //   position: relative;
+  //   width: 100%;
+  //   height: 40vh;
+  // }
+}
+
+video {
+  object-fit: cover;
+  margin-top: 3rem;
+  width: 100%;
+  border-radius: 3rem;
 }
 
 .view {
@@ -265,7 +296,7 @@ nav {
   opacity: 0;
   width: 50%;
   height: 100vh;
-  background: brown;
+  // background: brown;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -355,7 +386,7 @@ footer > h3 {
   width: 100%;
   height: 100vh;
   background: #121212;
-  transition: opacity .5s ease;
+  transition: opacity 0.5s ease;
 }
 
 .face {
@@ -390,7 +421,7 @@ footer > h3 {
 
 .face .circle {
   position: absolute;
-  top: calc(50% - .1rem);
+  top: calc(50% - 0.1rem);
   left: 50%;
   width: 50%;
   height: 0.2rem;
@@ -407,34 +438,28 @@ footer > h3 {
 }
 
 .face .circle::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
   background: #fff;
-  top: -.4rem;
-  right: -.6rem;
+  top: -0.4rem;
+  right: -0.6rem;
 }
 
 .face.face1 .circle::before {
   background: #ffff00;
-  box-shadow: 0 0 2rem #ffff00, 
-              0 0 4rem #ffff00,
-              0 0 6rem #ffff00,
-              0 0 8rem #ffff00,
-              0 0 10rem #ffff00,
-              0 0 0 .5rem rgba($color: #ff0, $alpha: .1);
+  box-shadow: 0 0 2rem #ffff00, 0 0 4rem #ffff00, 0 0 6rem #ffff00,
+    0 0 8rem #ffff00, 0 0 10rem #ffff00,
+    0 0 0 0.5rem rgba($color: #ff0, $alpha: 0.1);
 }
 
 .face.face2 .circle::before {
   background: #03a9f4;
-  box-shadow: 0 0 2rem #03a9f4, 
-              0 0 4rem #03a9f4,
-              0 0 6rem #03a9f4,
-              0 0 8rem #03a9f4,
-              0 0 10rem #03a9f4,
-              0 0 0 .5rem rgba($color: #03a9f4, $alpha: .1);
+  box-shadow: 0 0 2rem #03a9f4, 0 0 4rem #03a9f4, 0 0 6rem #03a9f4,
+    0 0 8rem #03a9f4, 0 0 10rem #03a9f4,
+    0 0 0 0.5rem rgba($color: #03a9f4, $alpha: 0.1);
 }
 
 @keyframes animate {
